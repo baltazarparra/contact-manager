@@ -18,25 +18,25 @@ npm start
 
 - Running the local server
 
-npm start
+> npm start
 
 - Running the tests
 
-npm test
+> npm test
 
 - Deploying to Firebase
 
-You'll need to ensure you're logged into Firebase first (if you are prompted, otherwise skip to next step):
+> You'll need to ensure you're logged into Firebase first (if you are prompted, otherwise skip to next step):
 
-firebase login
+> firebase login
 
 - To deploy:
 
-npm run deploy
+> npm run deploy
 
 ## Firebase rules
 
-```
+```json
 {
   "rules": {
     ".read": true,
