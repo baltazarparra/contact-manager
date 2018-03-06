@@ -16,21 +16,21 @@ npm start
 
 ## Tasks
 
-- Running the local server
+**Running the local server**
 
 > npm start
 
-- Running the tests
+**Running the tests**
 
 > npm test
 
-- Deploying to Firebase
+**Deploying to Firebase**
 
-> You'll need to ensure you're logged into Firebase first (if you are prompted, otherwise skip to next step):
+_You'll need to ensure you're logged into Firebase first (if you are prompted, otherwise skip to next step):_
 
 > firebase login
 
-- To deploy:
+**To deploy:**
 
 > npm run deploy
 
