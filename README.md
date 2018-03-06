@@ -4,9 +4,9 @@ Ultimate Angular Course - Final Project
 
 ## Dependencies
 
-Install Firebase CLI on the command-line with npm install -g firebase-tools
+Install Firebase CLI on the command-line with `npm install -g firebase-tools`
 
-Install Gulp CLI on the command-line with npm install -g gulp
+Install Gulp CLI on the command-line with `npm install -g gulp`
 
 ## Install and Run
 
