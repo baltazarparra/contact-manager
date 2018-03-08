@@ -3,4 +3,4 @@ angular
     'common',
     'components',
     'templates'
-  ]);
+  ])
