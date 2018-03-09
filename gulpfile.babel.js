@@ -1,6 +1,7 @@
 import gulp from 'gulp';
 import concat from 'gulp-concat';
 import wrap from 'gulp-wrap';
+import babel from 'gulp-babel';
 import uglify from 'gulp-uglify';
 import htmlmin from 'gulp-htmlmin';
 import gulpif from 'gulp-if';
@@ -78,6 +79,9 @@ gulp.task('scripts', ['modules'], () => {
     .pipe(wrap('(function(angular){\n\'use strict\';\n<%= contents %>})(window.angular);'))
     .pipe(concat('bundle.js'))
     .pipe(ngAnnotate())
+    .pipe(babel({
+      presets: ['es2015']
+    }))
     .pipe(gulpif(argv.deploy, uglify()))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(paths.dist + 'js/'));
