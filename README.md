@@ -8,6 +8,8 @@ Install Firebase CLI on the command-line with `npm install -g firebase-tools`
 
 Install Gulp CLI on the command-line with `npm install -g gulp`
 
+`node v6.8.1`
+`npm 9.10.8`
 ## Install and Run
 
 npm install
