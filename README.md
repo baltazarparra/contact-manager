@@ -1,6 +1,6 @@
 # Contact Manager
 
-Ultimate Angular Course - Final Project
+Ultimate AngularJs Final Project
 
 ## Dependencies
 
