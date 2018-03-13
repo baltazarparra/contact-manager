@@ -5,3 +5,7 @@ function AppController(AuthService, $state) {
 
   }
 }
+
+angular
+  .module('common')
+  .controller('AppController', AppController)
