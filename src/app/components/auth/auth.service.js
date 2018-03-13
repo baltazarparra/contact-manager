@@ -9,22 +9,27 @@ function AuthService($firebaseAuth) {
     authData = user
     return auth.$requireSignIn()
   }
-  this.login = function (user) {
+  this.login = function(user) {
     return auth
       .$signInWithEmailAndPassword(user.email, user.password)
       .then(storeAuthData)
   }
-  this.register = function (user) {
+  this.register = function(user) {
     return auth
       .$createUserWithEmailAndPassword(user.email, user.password)
       .then(storeAuthData)
   }
-  this.requireAuthentication = function () {
+  this.requireAuthentication = function() {
     return auth
       .$waitForSignIn().then(onSignIn)
   }
-  this.isAuthenticated = function () {
+  this.isAuthenticated = function() {
     return !!authData
+  }
+  this.getUser = function() {
+    if(authData) {
+      return authData
+    }
   }
 }
 
