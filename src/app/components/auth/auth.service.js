@@ -19,6 +19,13 @@ function AuthService($firebaseAuth) {
       .$createUserWithEmailAndPassword(user.email, user.password)
       .then(storeAuthData)
   }
+  this.logout = function() {
+    return auth
+      .$signOut()
+      .then(function() {
+        authData = null
+      })
+  }
   this.requireAuthentication = function() {
     return auth
       .$waitForSignIn().then(onSignIn)
