@@ -3,7 +3,7 @@ angular
     'ui.router',
     'firebase'
   ])
-  .config(function ($firebaseRefProvider) {
+  .config(function($firebaseRefProvider) {
     const config = {
       apiKey: "AIzaSyCNXe3i2lflgUwtfgnvItR1LuWQOPHJvmI",
       authDomain: "contacts-manager-f33e8.firebaseapp.com",
@@ -18,4 +18,24 @@ angular
         contacts: config.databaseURL + '/contacts'
       })
     firebase.initializeApp(config)
+  })
+  .run(function($transitions, $state, AuthService) {
+    $transitions.onStart({
+      to: function(state) {
+        return !!(state.data && state.data.requiredAuth)
+      }
+    }, function() {
+      return AuthService
+        .requireAuthentication()
+        .catch(function () {
+          return $state.target('auth.login')
+        })
+    })
+    $transitions.onStart({
+      to: 'auth.*'
+    }, function() {
+      if (AuthService.isAuthenticated()) {
+        return $state.target('app')
+      }
+    })
   })
