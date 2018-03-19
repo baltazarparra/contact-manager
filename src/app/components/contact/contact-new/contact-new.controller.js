@@ -1,4 +1,4 @@
-function ContactNewController(ContactService ) {
+function ContactNewController(ContactService, $state) {
   const ctrl = this
   ctrl.$onInit = function() {
     ctrl.contact = {
@@ -19,7 +19,9 @@ function ContactNewController(ContactService ) {
     return ContactService
       .createNewContact(event.contact)
       .then(function(contact) {
-        console.log(contact)
+        $state.go('contact', {
+          id: contact.key
+        })
       })
   }
 }

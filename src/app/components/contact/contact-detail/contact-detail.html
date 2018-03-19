@@ -11,7 +11,19 @@
         <label>
           Name <span class="contact__required">*</span>
         </label>
-        <input type="text" name="name" required="required" ng-model="$ctrl.contact.name">
+        <input
+          type="text"
+          name="name"
+          required="required"
+          ng-change="$ctrl.updateContact()"
+          ng-model-options="{
+            'updateOn': 'default blur',
+            'debounce': {
+              'default': 250,
+              'blur': 0
+            }
+          }"
+          ng-model="$ctrl.contact.name">
       </div>
       <div class="contact__field">
         <label>
@@ -20,19 +32,52 @@
             Must be a valid email
           </span>
         </label>
-        <input type="email" name="email" ng-model="$ctrl.contact.email">
+        <input
+          type="email"
+          name="email"
+          ng-change="$ctrl.updateContact()"
+          ng-model-options="{
+            'updateOn': 'default blur',
+            'debounce': {
+              'default': 250,
+              'blur': 0
+            }
+          }"
+          ng-model="$ctrl.contact.email">
       </div>
       <div class="contact__field">
         <label>
           Job title
         </label>
-        <input type="text" name="jobTitle" ng-model="$ctrl.contact.job">
+        <input
+          type="text"
+          name="jobTitle"
+          ng-change="$ctrl.updateContact()"
+          ng-model-options="{
+            'updateOn': 'default blur',
+            'debounce': {
+              'default': 250,
+              'blur': 0
+            }
+          }"
+          ng-model="$ctrl.contact.job">
       </div>
       <div class="contact__field">
         <label>
           Location
         </label>
-        <input type="text" name="location" ng-model="$ctrl.contact.location">
+        <input
+          type="text"
+          name="location"
+          ng-change="$ctrl.updateContact()"
+          ng-model-options="{
+            'updateOn': 'default blur',
+            'debounce': {
+              'default': 250,
+              'blur': 0
+            }
+          }"
+          ng-model="$ctrl.contact.location">
       </div>
     </div>
     <div class="contact__box contact__box--no-margin">
@@ -43,25 +88,69 @@
           <label>
             Facebook
           </label>
-          <input type="text" name="facebook" ng-model="$ctrl.contact.social.facebook">
+          <input
+            type="text"
+            name="facebook"
+            ng-change="$ctrl.updateContact()"
+            ng-model-options="{
+              'updateOn': 'default blur',
+              'debounce': {
+                'default': 250,
+                'blur': 0
+              }
+            }"
+            ng-model="$ctrl.contact.social.facebook">
       </div>
       <div class="contact__field">
           <label>
             Github
           </label>
-          <input type="text" name="github" ng-model="$ctrl.contact.social.github">
+          <input
+            type="text"
+            name="github"
+            ng-change="$ctrl.updateContact()"
+            ng-model-options="{
+              'updateOn': 'default blur',
+              'debounce': {
+                'default': 250,
+                'blur': 0
+              }
+            }"
+            ng-model="$ctrl.contact.social.github">
       </div>
       <div class="contact__field">
           <label>
             Twitter
           </label>
-          <input type="text" name="twitter" ng-model="$ctrl.contact.social.twitter">
+          <input
+            type="text"
+            name="twitter"
+            ng-change="$ctrl.updateContact()"
+            ng-model-options="{
+              'updateOn': 'default blur',
+              'debounce': {
+                'default': 250,
+                'blur': 0
+              }
+            }"
+            ng-model="$ctrl.contact.social.twitter">
       </div>
       <div class="contact__field">
           <label>
             Linkedin
           </label>
-          <input type="text" name="linkedin" ng-model="$ctrl.contact.social.linkedin">
+          <input
+            type="text"
+            name="linkedin"
+            ng-change="$ctrl.updateContact()"
+            ng-model-options="{
+              'updateOn': 'default blur',
+              'debounce': {
+                'default': 250,
+                'blur': 0
+              }
+            }"
+            ng-model="$ctrl.contact.social.linkedin">
       </div>
     </div>
     <div ng-if="$ctrl.isNewContact">
