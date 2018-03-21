@@ -16,9 +16,9 @@ angular
         url: '/contact/:id',
         component: 'contactEdit',
         resolve: {
-          contact: function($transitions$,  ContactService) {
-            const key = $transitions$.params().id
-            return ContactService.getContactById(key).$loaded
+          contact: function($transition$,  ContactService) {
+            const key = $transition$.params().id
+            return ContactService.getContactById(key).$loaded()
           }
         }
       })
