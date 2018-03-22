@@ -26,6 +26,7 @@ function ContactDetailController() {
   }
   ctrl.tagChange = function(event) {
     ctrl.contact.tag = event.tag
+    ctrl.updateContact()
   }
 }
 

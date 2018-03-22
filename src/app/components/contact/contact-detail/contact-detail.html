@@ -153,6 +153,10 @@
             ng-model="$ctrl.contact.social.linkedin">
       </div>
     </div>
+    <contact-tag
+      tag="$ctrl.contact.tag"
+      on-change="$ctrl.tagChange($event);">
+    </contact-tag>
     <div ng-if="$ctrl.isNewContact">
       <button ng-disabled="contactDetailForm.$invalid" ng-click="$ctrl.saveContact()">Create contact</button>
     </div>
