@@ -1,6 +1,6 @@
 # Contact Manager
 
-Ultimate AngularJs Final Project
+[AngularJs study project](https://contacts-manager-f33e8.firebaseapp.com)
 
 ## Dependencies
 
