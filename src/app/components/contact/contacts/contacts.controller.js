@@ -1,7 +1,12 @@
-function ContactsController ($state) {
+function ContactsController($filter, $state) {
   const ctrl = this
-  ctrl.goToContact = function(event) {
-    $state.go('contact', {id: event.contactId})
+  setTimeout(function() {
+    ctrl.filteredContacts = $filter('contactsFilter')(ctrl.contacts, ctrl.filter)
+  })
+  ctrl.goToContact = function (event) {
+    $state.go('contact', {
+      id: event.contactId
+    })
   }
 }
 
